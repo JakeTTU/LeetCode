@@ -1,9 +1,8 @@
 '''
 https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
-
-Written to find all starting indexes instead of only first. 
-
+Written to find all starting indices instead of only first. 
 '''
+
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
         indexes = []
