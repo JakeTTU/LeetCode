@@ -22,24 +22,17 @@ class Solution:
             l2 = l2.next
             l3 = l3.next
 
-        while l1:
-            l3.val = (l1.val+carry) %10
-            carry = (l1.val+carry) // 10
-            if l1.next or carry == 1:
-                l3.next = ListNode(1)
-            l1 = l1.next
-            l3 = l3.next
-        
-        while l2:
-            l3.val = (l2.val+carry) %10
-            carry = (l2.val+carry) // 10
-            if l2.next or carry == 1:
-                l3.next = ListNode(1)
-            l2 = l2.next
+        l = l1 if l1 else l2
+
+        while l:
+            l3.val = (l.val+carry) %10
+            carry = (l.val+carry) // 10
+            if l.next or carry == 1:
+                l3.next = ListNode(carry)
+            l = l.next
             l3 = l3.next
 
         return lt
-            
  
 
 
